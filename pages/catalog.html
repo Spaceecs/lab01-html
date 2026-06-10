@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Асинхронний динамічний каталог курсів" />
+    <title>Каталог Курсів | Data-driven UI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+    <script src="../js/ui.js" defer></script>
+    <script src="../js/contact.js" defer></script>
+    <script src="../js/catalog.js" defer></script>
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-container">
+        <span class="logo">Web-Проект</span>
+        <div class="header-controls">
+          <button
+            class="theme-toggle"
+            id="theme-btn"
+            aria-label="Перемикач теми"
+          >
+            Mісяць/Сонце
+          </button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-label="Головне меню"
+          >
+            ☰
+          </button>
+        </div>
+        <nav class="main-nav">
+          <a href="../index.html" class="nav-link">Головна</a>
+          <a href="about.html" class="nav-link">Про мене</a>
+          <a href="catalog.html" class="nav-link">Каталог</a>
+          <a href="contact.html" class="nav-link">Контакти</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h1>Доступні освітні програми</h1>
+        <p>
+          Дані на цій сторінці завантажуються асинхронно через `fetch()` та
+          керуються станом вашого інтерфейсу в реальному часі.
+        </p>
+
+        <div class="catalog-controls">
+          <div class="control-group search-group">
+            <label for="catalog-search">Пошук:</label>
+            <input
+              type="text"
+              id="catalog-search"
+              placeholder="Введіть назву або опис..."
+            />
+          </div>
+
+          <div class="control-group filter-group">
+            <label for="catalog-category">Категорія:</label>
+            <select id="catalog-category">
+              <option value="all">Усі напрямки</option>
+              <option value="frontend">Frontend-розробка</option>
+              <option value="backend">Backend-інженерія</option>
+              <option value="design">UX/UI Дизайн</option>
+            </select>
+          </div>
+
+          <div class="control-group sort-group">
+            <label for="catalog-sort">Сортувати за:</label>
+            <select id="catalog-sort">
+              <option value="default">За замовчуванням</option>
+              <option value="price-asc">Ціна: від найменшої</option>
+              <option value="price-desc">Ціна: від найбільшої</option>
+              <option value="rating-desc">Рейтинг: від найвищого</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <div id="catalog-loading" class="status-box loading-box">
+        <div class="spinner"></div>
+        <p>
+          Завантаження актуальних даних програми навчання, будь ласка
+          зачекайте...
+        </p>
+      </div>
+
+      <div id="catalog-error" class="status-box error-box" hidden>
+        <h3>Помилка завантаження каталогу</h3>
+        <p id="error-message-text"></p>
+      </div>
+
+      <div id="catalog-empty" class="status-box empty-box" hidden>
+        <p>
+          На жаль, за вашими критеріями пошуку та фільтрації не знайдено жодного
+          курсу.
+        </p>
+      </div>
+
+      <div id="catalog-grid" class="catalog-grid" data-catalog></div>
+
+      <div class="pagination-container">
+        <button id="load-more-btn" class="btn btn-primary" hidden>
+          Показати ще
+        </button>
+      </div>
+    </main>
+
+    <div id="details-modal" class="modal" hidden>
+      <div class="modal-overlay"></div>
+      <div class="modal-wrapper details-wrapper">
+        <button class="modal-close" id="close-details-btn">&times;</button>
+        <div class="modal-body" id="details-modal-content"></div>
+      </div>
+    </div>
+
+    <button class="back-to-top" id="back-btn" hidden>↑ Вгору</button>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          &copy; <span id="current-year"></span> Студент Інженерії ПЗ. Усі права
+          захищено.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

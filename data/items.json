@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "Основи HTML5 та CSS3",
+    "category": "frontend",
+    "description": "Базовий курс для початківців. Семантична розмітка, флекси, сітки (Grid) та адаптивна верстка під мобільні пристрої.",
+    "price": 1200,
+    "rating": 4.8,
+    "level": "Початківець",
+    "image": "https://picsum.photos/id/1/300/200"
+  },
+  {
+    "id": 2,
+    "title": "JavaScript Vanilla Core",
+    "category": "frontend",
+    "description": "Глибоке занурення в архітектуру JS: робота з DOM-деревом, асинхронні запити, замикання, проміси та ООП.",
+    "price": 2500,
+    "rating": 4.9,
+    "level": "Середній",
+    "image": "https://picsum.photos/id/60/300/200"
+  },
+  {
+    "id": 3,
+    "title": "UX/UI Дизайн в Figma",
+    "category": "design",
+    "description": "Проектування інтерфейсів користувача. Створення варфреймів, інтерактивних прототипів та дизайн-систем.",
+    "price": 1800,
+    "rating": 4.6,
+    "level": "Початківець",
+    "image": "https://picsum.photos/id/119/300/200"
+  },
+  {
+    "id": 4,
+    "title": "React.js – Сучасна розробка",
+    "category": "frontend",
+    "description": "Розробка single-page застосунків (SPA). Хуки, стейт-менеджери, оптимізація рендерингу та взаємодія з REST API.",
+    "price": 3400,
+    "rating": 5.0,
+    "level": "Просунутий",
+    "image": "https://picsum.photos/id/180/300/200"
+  },
+  {
+    "id": 5,
+    "title": "Node.js & Express Серверна логіка",
+    "category": "backend",
+    "description": "Побудова масштабованих серверних архітектур, робота з файловою системою, потоками даних та побудова RESTful API.",
+    "price": 2900,
+    "rating": 4.7,
+    "level": "Середній",
+    "image": "https://picsum.photos/id/3c/300/200"
+  },
+  {
+    "id": 6,
+    "title": "Бази даних: SQL, PostgreSQL",
+    "category": "backend",
+    "description": "Проектування реляційних баз даних, написання складних оптимізованих запитів, індекси, транзакції та процедури.",
+    "price": 2100,
+    "rating": 4.5,
+    "level": "Середній",
+    "image": "https://picsum.photos/id/48/300/200"
+  },
+  {
+    "id": 7,
+    "title": "Анімації веб-інтерфейсів за допомогою GSAP",
+    "category": "design",
+    "description": "Створення складних тригерних та кастомних таймлайн-анімацій для сучасних промо-сайтів та інтерактивних лендингів.",
+    "price": 1600,
+    "rating": 4.4,
+    "level": "Середній",
+    "image": "https://picsum.photos/id/250/300/200"
+  },
+  {
+    "id": 8,
+    "title": "TypeScript для Enterprise Проектів",
+    "category": "frontend",
+    "description": "Строга типізація даних у JS. Інтерфейси, генерики (Generics), декоратори та інтеграція в сучасні веб-фреймворки.",
+    "price": 3100,
+    "rating": 4.9,
+    "level": "Просунутий",
+    "image": "https://picsum.photos/id/532/300/200"
+  },
+  {
+    "id": 9,
+    "title": "Docker, CI/CD та Основи DevOps",
+    "category": "backend",
+    "description": "Контейнеризація веб-застосунків, автоматизація збірок за допомогою GitHub Actions, деплой проектів на хмарні сервери.",
+    "price": 3800,
+    "rating": 4.8,
+    "level": "Просунутий",
+    "image": "https://picsum.photos/id/443/300/200"
+  },
+  {
+    "id": 10,
+    "title": "Адаптивний Графічний Дизайн",
+    "category": "design",
+    "description": "Створення фірмових стилів, векторних ілюстрацій та підготовка графічних асетів для інтеграції у фронтенд-код.",
+    "price": 1400,
+    "rating": 4.3,
+    "level": "Початківець",
+    "image": "https://picsum.photos/id/370/300/200"
+  }
+]

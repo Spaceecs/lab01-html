@@ -1,13 +1,17 @@
 document.addEventListener("DOMContentLoaded", init);
 
-function init() {
-  initActiveNav();
-  initMenuToggle();
-  initThemeToggle();
-  initBackToTopAndYear();
+async function init() {
+  if (typeof initActiveNav === "function") initActiveNav();
+  if (typeof initMenuToggle === "function") initMenuToggle();
+  if (typeof initThemeToggle === "function") initThemeToggle();
+  if (typeof initBackToTopAndYear === "function") initBackToTopAndYear();
+  if (typeof initAccordion === "function") initAccordion();
+  if (typeof initFilters === "function") initFilters();
+  if (typeof initModal === "function") initModal();
 
-  initAccordion();
-  initFilters();
-  initModal();
-  initContactForm();
+  if (typeof initContactForm === "function") initContactForm();
+
+  if (typeof initCatalogPage === "function") {
+    await initCatalogPage();
+  }
 }

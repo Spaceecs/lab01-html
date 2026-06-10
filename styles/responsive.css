@@ -47,4 +47,16 @@
   .btn {
     width: 100%;
   }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
 }

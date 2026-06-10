@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Сторінка про автора проекту із вбудованими мультимедійними HTML5 елементами аудіо та відео.">
+    <meta name="description" content="Сторінка про автора проекту із вбудованими мультимедійними HTML5 елементами.">
     <title>Про мене | Медіа контент</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/responsive.css">
+    <script src="../js/ui.js" defer></script>
+    <script src="../js/contact.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
-
     <header class="site-header">
         <div class="container header-container">
             <span class="logo">Web-Проект</span>
+            <div class="header-controls">
+                <button class="theme-toggle" id="theme-btn" aria-label="Перемикач теми">Mісяць/Сонце</button>
+                <button class="menu-toggle" aria-expanded="false" aria-label="Головне меню">☰</button>
+            </div>
             <nav class="main-nav">
                 <a href="../index.html" class="nav-link">Головна</a>
-                <a href="about.html" class="nav-link active">Про мене</a>
+                <a href="about.html" class="nav-link">Про мене</a>
                 <a href="contact.html" class="nav-link">Контакти</a>
             </nav>
         </div>
@@ -23,44 +29,33 @@
 
     <main class="container">
         <section class="card">
-            <h1>Трохи інформації про мене та мої захоплення</h1>
-            <p>Я захоплююся веб-розробкою, сучасними технологіями та якісним медіа-контентом. Нижче представлені приклади того, як HTML5 дозволяє легко вбудовувати аудіо та відео без використання сторонніх плеєрів.</p>
+            <h1>Про автора сайту</h1>
+            <p>Тут розміщено медіа-контент. Користувач може увімкнути темну тему для комфортного читання у темну пору доби.</p>
         </section>
-
         <div class="media-flex-container">
             <section class="card media-card">
-                <h2>Моє відео-портфоліо / Демонстрація</h2>
-                <p>Короткий демонстраційний ролик, що показує приклад інтеграції відео:</p>
-                
+                <h2>Відео-презентація</h2>
                 <video controls class="responsive-video">
                     <source src="../assets/media/demo.mp4" type="video/mp4">
-                    <source src="../assets/media/demo.webm" type="video/webm">
-                    <p>Ваш браузер надто старий і не підтримує HTML5 відео. 
-                       Ви можете <a href="../assets/media/demo.mp4">завантажити відео файл</a> замість цього.
-                    </p>
+                    <p>Ваш браузер не підтримує відео.</p>
                 </video>
             </section>
-
             <section class="card media-card">
-                <h2>Мій улюблений аудіотрек</h2>
-                <p>Приклад підключення аудіофайлу за допомогою семантичного тега audio:</p>
-                
+                <h2>Аудіотрек</h2>
                 <audio controls class="responsive-audio">
                     <source src="../assets/media/demo.mp3" type="audio/mpeg">
-                    <source src="../assets/media/demo.ogg" type="audio/ogg">
-                    <p>Ваш браузер не підтримує цей аудіофайл. 
-                       Ви можете <a href="../assets/media/demo.mp3">завантажити аудіо трек</a>.
-                    </p>
+                    <p>Ваш браузер не підтримує аудіо.</p>
                 </audio>
             </section>
         </div>
     </main>
 
+    <button class="back-to-top" id="back-btn" hidden>↑ Вгору</button>
+
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 Студент Інженерії ПЗ. Усі права захищено.</p>
+            <p>&copy; <span id="current-year"></span> Студент Інженерії ПЗ. Усі права захищено.</p>
         </div>
     </footer>
-
 </body>
 </html>

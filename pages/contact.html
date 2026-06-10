@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Зворотній зв'язок. Форма з валідацією для відправки повідомлень автору сайту."
+    />
+    <title>Контакти | Форма зв'язку</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <strong>Навігація:</strong>
+        <a href="../index.html">Головна</a> |
+        <a href="about.html">Про мене</a> |
+        <a href="contact.html">Контакти</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Зв'яжіться зі мною</h1>
+      <p>
+        Якщо у вас виникли запитання або пропозиції щодо співпраці, заповніть
+        форму нижче. Весь ввід валідується автоматично засобами HTML5.
+      </p>
+
+      <form action="./submit_page" method="get">
+        <h2>Форма зворотного зв'язку</h2>
+
+        <p>
+          <label for="name">Ім’я (обов’язково):</label><br />
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            minlength="2"
+            maxlength="30"
+            placeholder="Ваше ім'я"
+          />
+        </p>
+
+        <p>
+          <label for="email">Email (обов’язково):</label><br />
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            placeholder="example@email.com"
+          />
+        </p>
+
+        <p>
+          <label for="phone">Телефон (необов'язково):</label><br />
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            pattern="^\+380\d{9}$"
+            placeholder="+380XXXXXXXXX"
+          />
+        </p>
+
+        <p>
+          <label for="topic">Тема звернення:</label><br />
+          <select id="topic" name="topic">
+            <option value="study">Навчання / Практика</option>
+            <option value="work">Пропозиція роботи</option>
+            <option value="other">Інше</option>
+          </select>
+        </p>
+
+        <fieldset>
+          <legend>Зручний спосіб зв’язку</legend>
+          <label>
+            <input type="radio" name="contactWay" value="email" checked />
+            Email </label
+          ><br />
+          <label>
+            <input type="radio" name="contactWay" value="phone" /> Телефон
+          </label>
+        </fieldset>
+
+        <p>
+          <label for="message">Повідомлення (мінімум 10 символів):</label><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            cols="40"
+            minlength="10"
+            placeholder="Текст вашого повідомлення тут..."
+          ></textarea>
+        </p>
+
+        <p>
+          <label>
+            <input type="checkbox" name="agree" required />
+            Я даю згоду на обробку персональних даних відповідно до правил.
+          </label>
+        </p>
+
+        <p>
+          <button type="submit">Надіслати повідомлення</button>
+          <button type="reset">Очистити форму</button>
+        </p>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Студент Інженерії ПЗ. Усі права захищено.</p>
+    </footer>
+  </body>
+</html>

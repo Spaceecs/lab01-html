@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Сторінка про автора проекту із вбудованими мультимедійними HTML5 елементами аудіо та відео."
+    />
+    <title>Про мене | Медіа контент</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <strong>Навігація:</strong>
+        <a href="../index.html">Головна</a> |
+        <a href="about.html">Про мене</a> |
+        <a href="contact.html">Контакти</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Трохи інформації про мене та мої захоплення</h1>
+      <p>
+        Я захоплююся веб-розробкою, сучасними технологіями та якісним
+        медіа-контентом. Нижче представлені приклади того, як HTML5 дозволяє
+        легко вбудовувати аудіо та відео без використання сторонніх плеєрів.
+      </p>
+
+      <h2>Моє відео-портфоліо / Демонстрація</h2>
+      <p>
+        Короткий демонстраційний ролик, що показує приклад інтеграції відео з
+        двома форматами для кращої кросбраузерності:
+      </p>
+
+      <video controls width="480">
+        <source src="../assets/media/demo.mp4" type="video/mp4" />
+        <source src="../assets/media/demo.webm" type="video/webm" />
+        <p>
+          Ваш браузер надто старий і не підтримує HTML5 відео. Вы можете
+          <a href="../assets/media/demo.mp4">завантажити відео файл</a> замість
+          цього.
+        </p>
+      </video>
+
+      <h2>Мій улюблений аудіотрек</h2>
+      <p>
+        Приклад підключення аудіофайлу (використовується формат MP3 та OGG для
+        максимальної сумісності):
+      </p>
+
+      <audio controls>
+        <source src="../assets/media/demo.mp3" type="audio/mpeg" />
+        <source src="../assets/media/demo.ogg" type="audio/ogg" />
+        <p>
+          Ваш браузер не підтримує цей аудіофайл. Ви можете
+          <a href="../assets/media/demo.mp3">завантажити аудіо трек</a>.
+        </p>
+      </audio>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Студент Інженерії ПЗ. Усі права захищено.</p>
+    </footer>
+  </body>
+</html>

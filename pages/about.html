@@ -1,66 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Сторінка про автора проекту із вбудованими мультимедійними HTML5 елементами аудіо та відео."
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сторінка про автора проекту із вбудованими мультимедійними HTML5 елементами аудіо та відео.">
     <title>Про мене | Медіа контент</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <strong>Навігація:</strong>
-        <a href="../index.html">Головна</a> |
-        <a href="about.html">Про мене</a> |
-        <a href="contact.html">Контакти</a>
-      </nav>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <span class="logo">Web-Проект</span>
+            <nav class="main-nav">
+                <a href="../index.html" class="nav-link">Головна</a>
+                <a href="about.html" class="nav-link active">Про мене</a>
+                <a href="contact.html" class="nav-link">Контакти</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-      <h1>Трохи інформації про мене та мої захоплення</h1>
-      <p>
-        Я захоплююся веб-розробкою, сучасними технологіями та якісним
-        медіа-контентом. Нижче представлені приклади того, як HTML5 дозволяє
-        легко вбудовувати аудіо та відео без використання сторонніх плеєрів.
-      </p>
+    <main class="container">
+        <section class="card">
+            <h1>Трохи інформації про мене та мої захоплення</h1>
+            <p>Я захоплююся веб-розробкою, сучасними технологіями та якісним медіа-контентом. Нижче представлені приклади того, як HTML5 дозволяє легко вбудовувати аудіо та відео без використання сторонніх плеєрів.</p>
+        </section>
 
-      <h2>Моє відео-портфоліо / Демонстрація</h2>
-      <p>
-        Короткий демонстраційний ролик, що показує приклад інтеграції відео з
-        двома форматами для кращої кросбраузерності:
-      </p>
+        <div class="media-flex-container">
+            <section class="card media-card">
+                <h2>Моє відео-портфоліо / Демонстрація</h2>
+                <p>Короткий демонстраційний ролик, що показує приклад інтеграції відео:</p>
+                
+                <video controls class="responsive-video">
+                    <source src="../assets/media/demo.mp4" type="video/mp4">
+                    <source src="../assets/media/demo.webm" type="video/webm">
+                    <p>Ваш браузер надто старий і не підтримує HTML5 відео. 
+                       Ви можете <a href="../assets/media/demo.mp4">завантажити відео файл</a> замість цього.
+                    </p>
+                </video>
+            </section>
 
-      <video controls width="480">
-        <source src="../assets/media/demo.mp4" type="video/mp4" />
-        <source src="../assets/media/demo.webm" type="video/webm" />
-        <p>
-          Ваш браузер надто старий і не підтримує HTML5 відео. Вы можете
-          <a href="../assets/media/demo.mp4">завантажити відео файл</a> замість
-          цього.
-        </p>
-      </video>
-
-      <h2>Мій улюблений аудіотрек</h2>
-      <p>
-        Приклад підключення аудіофайлу (використовується формат MP3 та OGG для
-        максимальної сумісності):
-      </p>
-
-      <audio controls>
-        <source src="../assets/media/demo.mp3" type="audio/mpeg" />
-        <source src="../assets/media/demo.ogg" type="audio/ogg" />
-        <p>
-          Ваш браузер не підтримує цей аудіофайл. Ви можете
-          <a href="../assets/media/demo.mp3">завантажити аудіо трек</a>.
-        </p>
-      </audio>
+            <section class="card media-card">
+                <h2>Мій улюблений аудіотрек</h2>
+                <p>Приклад підключення аудіофайлу за допомогою семантичного тега audio:</p>
+                
+                <audio controls class="responsive-audio">
+                    <source src="../assets/media/demo.mp3" type="audio/mpeg">
+                    <source src="../assets/media/demo.ogg" type="audio/ogg">
+                    <p>Ваш браузер не підтримує цей аудіофайл. 
+                       Ви можете <a href="../assets/media/demo.mp3">завантажити аудіо трек</a>.
+                    </p>
+                </audio>
+            </section>
+        </div>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Студент Інженерії ПЗ. Усі права захищено.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Студент Інженерії ПЗ. Усі права захищено.</p>
+        </div>
     </footer>
-  </body>
+
+</body>
 </html>

@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .media-flex-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .container {
+    width: min(100% - 20px, 1100px);
+  }
+
+  .card {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

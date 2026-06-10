@@ -1,118 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Зворотній зв'язок. Форма з валідацією для відправки повідомлень автору сайту."
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Зворотній зв'язок. Форма з валідацією для відправки повідомлень автору сайту.">
     <title>Контакти | Форма зв'язку</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
     <script src="app.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <strong>Навігація:</strong>
-        <a href="../index.html">Головна</a> |
-        <a href="about.html">Про мене</a> |
-        <a href="contact.html">Контакти</a>
-      </nav>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <span class="logo">Web-Проект</span>
+            <nav class="main-nav">
+                <a href="../index.html" class="nav-link">Головна</a>
+                <a href="about.html" class="nav-link">Про мене</a>
+                <a href="contact.html" class="nav-link active">Контакти</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-      <h1>Зв'яжіться зі мною</h1>
-      <p>
-        Якщо у вас виникли запитання або пропозиції щодо співпраці, заповніть
-        форму нижче. Весь ввід валідується автоматично засобами HTML5.
-      </p>
+    <main class="container">
+        <section class="card form-section">
+            <h1>Зв'яжіться зі мною</h1>
+            <p>Якщо у вас виникли запитання або пропозиції щодо співпраці, заповніть форму нижче. Весь ввід валідується автоматично засобами HTML5.</p>
 
-      <form action="./submit_page" method="get">
-        <h2>Форма зворотного зв'язку</h2>
+            <form action="./submit_page" method="get" class="styled-form">
+                <h2>Форма зворотного зв'язку</h2>
+                
+                <div class="form-group">
+                    <label for="name">Ім’я (обов’язково):</label>
+                    <input id="name" name="name" type="text" required minlength="2" maxlength="30" placeholder="Ваше ім'я">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email (обов’язково):</label>
+                    <input id="email" name="email" type="email" required placeholder="example@email.com">
+                </div>
 
-        <p>
-          <label for="name">Ім’я (обов’язково):</label><br />
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            minlength="2"
-            maxlength="30"
-            placeholder="Ваше ім'я"
-          />
-        </p>
-
-        <p>
-          <label for="email">Email (обов’язково):</label><br />
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            placeholder="example@email.com"
-          />
-        </p>
-
-        <p>
-          <label for="phone">Телефон (необов'язково):</label><br />
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            pattern="^\+380\d{9}$"
-            placeholder="+380XXXXXXXXX"
-          />
-        </p>
-
-        <p>
-          <label for="topic">Тема звернення:</label><br />
-          <select id="topic" name="topic">
-            <option value="study">Навчання / Практика</option>
-            <option value="work">Пропозиція роботи</option>
-            <option value="other">Інше</option>
-          </select>
-        </p>
-
-        <fieldset>
-          <legend>Зручний спосіб зв’язку</legend>
-          <label>
-            <input type="radio" name="contactWay" value="email" checked />
-            Email </label
-          ><br />
-          <label>
-            <input type="radio" name="contactWay" value="phone" /> Телефон
-          </label>
-        </fieldset>
-
-        <p>
-          <label for="message">Повідомлення (мінімум 10 символів):</label><br />
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            cols="40"
-            minlength="10"
-            placeholder="Текст вашого повідомлення тут..."
-          ></textarea>
-        </p>
-
-        <p>
-          <label>
-            <input type="checkbox" name="agree" required />
-            Я даю згоду на обробку персональних даних відповідно до правил.
-          </label>
-        </p>
-
-        <p>
-          <button type="submit">Надіслати повідомлення</button>
-          <button type="reset">Очистити форму</button>
-        </p>
-      </form>
+                <div class="form-group">
+                    <label for="phone">Телефон (необов'язково):</label>
+                    <input id="phone" name="phone" type="tel" pattern="^\+380\d{9}$" placeholder="+380XXXXXXXXX">
+                </div>
+                
+                <div class="form-group">
+                    <label for="topic">Тема звернення:</label>
+                    <select id="topic" name="topic">
+                        <option value="study">Навчання / Практика</option>
+                        <option value="work">Пропозиція роботи</option>
+                        <option value="other">Інше</option>
+                    </select>
+                </div>
+                
+                <fieldset class="form-fieldset">
+                    <legend>Зручний спосіб зв’язку</legend>
+                    <label class="radio-checkbox-label">
+                        <input type="radio" name="contactWay" value="email" checked> Email
+                    </label>
+                    <label class="radio-checkbox-label">
+                        <input type="radio" name="contactWay" value="phone"> Телефон
+                    </label>
+                </fieldset>
+                
+                <div class="form-group">
+                    <label for="message">Повідомлення (мінімум 10 символів):</label>
+                    <textarea id="message" name="message" rows="5" minlength="10" placeholder="Текст вашого повідомлення тут..."></textarea>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label class="radio-checkbox-label">
+                        <input type="checkbox" name="agree" required>
+                        Я даю згоду на обробку персональних даних відповідно до правил.
+                    </label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Надіслати повідомлення</button>
+                    <button type="reset" class="btn btn-reset">Очистити форму</button>
+                </div>
+            </form>
+        </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Студент Інженерії ПЗ. Усі права захищено.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Студент Інженерії ПЗ. Усі права захищено.</p>
+        </div>
     </footer>
-  </body>
+
+</body>
 </html>

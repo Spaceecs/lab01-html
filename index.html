@@ -1,110 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Головна сторінка практичної роботи №1 з веб-програмування. Базова структура HTML-документа, списки, таблиці та навігація."
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Головна сторінка практичної роботи №2 з веб-програмування. Стилізована структура HTML-документа, списки, таблиці та навігація.">
     <title>Мій перший HTML-сайт | Головна</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <strong>Навігація:</strong>
-        <a href="index.html">Головна</a> |
-        <a href="pages/about.html">Про мене</a> |
-        <a href="pages/contact.html">Контакти</a>
-      </nav>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <span class="logo">Web-Проект</span>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active">Головна</a>
+                <a href="pages/about.html" class="nav-link">Про мене</a>
+                <a href="pages/contact.html" class="nav-link">Контакти</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-      <h1>Ласкаво просимо до мого першого веб-сайту!</h1>
-      <p>
-        Цей сайт створено в рамках виконання <em>Практичної роботи №1</em> з
-        дисципліни "Створення Web-сайтів (Front-end)". Тут я тренуюся будувати
-        правильну структуру документа за допомогою сучасних стандартів HTML5.
-      </p>
+    <main class="container">
+        <section class="card">
+            <h1>Ласкаво просимо до мого першого веб-сайту!</h1>
+            <p>Цей сайт створено в рамках виконання <em>Практичної роботи №2</em> з дисципліни "Створення Web-сайтів (Front-end)". Тут я тренуюся будувати правильну структуру документа за допомогою сучасних стандартів HTML5 та оформлювати її стилями CSS3.</p>
+        </section>
 
-      <h2>Про проект та технології</h2>
-      <p>
-        HTML5 надає величезну кількість семантичних тегів, які допомагають
-        пошуковим роботам краще розуміти вміст сторінки. Використання правильної
-        розмітки — це основа <strong>доступності (accessibility)</strong> та
-        якісної SEO-оптимізації.
-      </p>
+        <section class="card">
+            <h2>Про проект та технології</h2>
+            <p>HTML5 надає величезну кількість семантичних тегів, які допомагають пошуковим роботам краще розуміти вміст сторінки. Використання правильної розмітки — це основа <strong>доступності (accessibility)</strong> та якісної SEO-оптимізації.</p>
+            
+            <h3>Стек технологій, який я вивчаю:</h3>
+            <ul class="styled-list">
+                <li><strong>HTML5</strong> — структура та контент сторінки.</li>
+                <li><strong>CSS3</strong> — стилізація та адаптивний дизайн (наступний крок).</li>
+                <li><strong>JavaScript</strong> — інтерактивність та логіка на клієнті.</li>
+            </ul>
+        </section>
 
-      <h3>Стек технологій, який я вивчаю:</h3>
-      <ul>
-        <li><strong>HTML5</strong> — структура та контент сторінки.</li>
-        <li>
-          <strong>CSS3</strong> — стилізація та адаптивний дизайн (наступний
-          крок).
-        </li>
-        <li>
-          <strong>JavaScript</strong> — інтерактивність та логіка на клієнті.
-        </li>
-      </ul>
+        <section class="card table-responsive">
+            <h2>Мій розклад занять (Приклад таблиці)</h2>
+            <p>Нижче наведено таблицю з моїм орієнтовним графіком навчання на тиждень.</p>
+            
+            <table class="styled-table">
+                <caption>Розклад профільних занять</caption>
+                <thead>
+                    <tr>
+                        <th>День тижня</th>
+                        <th>Дисципліна</th>
+                        <th>Тип заняття</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Понеділок</td>
+                        <td>Web-програмування (Front-end)</td>
+                        <td>Лекція</td>
+                    </tr>
+                    <tr>
+                        <td>Середа</td>
+                        <td>Конструювання ПЗ</td>
+                        <td>Лабораторна</td>
+                    </tr>
+                    <tr>
+                        <td>П'ятниця</td>
+                        <td>Бази даних</td>
+                        <td>Практика</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-      <h2>Мій розклад занять (Приклад таблиці)</h2>
-      <p>
-        Нижче наведено таблицю з моїм орієнтовним графіком навчання на тиждень.
-      </p>
+        <section class="card">
+            <h2>Цілі на поточний семестр</h2>
+            <ol class="styled-list">
+                <li>Повністю опанувати семантичну розмітку.</li>
+                <li>Розібратися з валідацією форм без сторонніх бібліотек.</li>
+                <li>Завантажити готовий проект на GitHub репозиторій.</li>
+            </ol>
+        </section>
 
-      <table border="1">
-        <caption>
-          Розклад профільних занять
-        </caption>
-        <thead>
-          <tr>
-            <th>День тижня</th>
-            <th>Дисципліна</th>
-            <th>Тип заняття</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Понеділок</td>
-            <td>Web-програмування (Front-end)</td>
-            <td>Лекція</td>
-          </tr>
-          <tr>
-            <td>Середа</td>
-            <td>Конструювання ПЗ</td>
-            <td>Лабораторна</td>
-          </tr>
-          <tr>
-            <td>П'ятниця</td>
-            <td>Бази даних</td>
-            <td>Практика</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Цілі на поточний семестр</h2>
-      <ol>
-        <li>Повністю опанувати семантичну розмітку.</li>
-        <li>Розібратися з валідацією форм без сторонніх бібліотек.</li>
-        <li>Завантажити готовий проект на GitHub репозиторій.</li>
-      </ol>
-
-      <h2>Візуальний контент</h2>
-      <figure>
-        <img
-          src="https://picsum.photos/id/180/600/400"
-          alt="Ноутбук розробника з кодом на екрані"
-          width="600"
-          height="400"
-        />
-        <figcaption>
-          Рис. 1 — Процес написання якісного семантичного коду.
-        </figcaption>
-      </figure>
+        <section class="card">
+            <h2>Візуальний контент</h2>
+            <figure class="styled-figure">
+                <img src="https://picsum.photos/id/180/600/400" alt="Ноутбук розробника з кодом на екрані" class="responsive-img">
+                <figcaption>Рис. 1 — Процес написання якісного семантичного коду.</figcaption>
+            </figure>
+        </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Студент Інженерії ПЗ. Усі права захищено.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Студент Інженерії ПЗ. Усі права захищено.</p>
+        </div>
     </footer>
-  </body>
+
+</body>
 </html>
